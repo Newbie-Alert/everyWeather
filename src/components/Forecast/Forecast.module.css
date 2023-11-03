@@ -1,0 +1,17 @@
+.forecast_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.today_forecast {
+  width: 100%;
+  border-right: 1px solid #4c4c4c;
+}
+
+.today_forecast:last-child {
+  border: none;
+}

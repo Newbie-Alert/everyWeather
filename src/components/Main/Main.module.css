@@ -1,0 +1,31 @@
+.main_container {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.current_weather_icon {
+  width: 100%;
+}
+
+.current_weather_icon img {
+  display: block;
+  width: 250px;
+  margin: auto;
+  height: min-content;
+}
+
+.current_weather_temprature {
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+.current_weather_city {
+  font-size: 3rem;
+}

@@ -1,0 +1,57 @@
+.input_container {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_form {
+  width: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s cubic-bezier(0.03, 0.94, 1, 1);
+}
+
+.search_input {
+  width: 100%;
+  padding: 0.65rem;
+  padding-left: 1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.search_input::placeholder {
+  visibility: hidden;
+}
+
+.search_input:focus::placeholder {
+  visibility: visible;
+}
+
+/* 자식 요소에 포커스가 되면 부모 요소에도 적용하는 속성 */
+.input_form:focus-within {
+  width: 75%;
+}
+
+.glass_icon {
+  color: black;
+  position: absolute;
+  top: 37%;
+  right: 30%;
+  transform: translateY(-55%);
+  transform: rotate(45deg);
+  transform-origin: 80%;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.03, 0.94, 1, 1);
+}
+
+.input_form:focus-within .glass_icon {
+  right: 5%;
+  transform: rotate(0deg);
+  top: 26%;
+}
