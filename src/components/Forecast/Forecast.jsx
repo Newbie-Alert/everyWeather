@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Forecast.module.css";
 
 export default function Forecast({ forecastData }) {
+  // 오늘 날짜를 가져옵니다.
   const utc = new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000;
   const krDiff = 9 * 60 * 60 * 1000;
   const koreaDate =
@@ -12,7 +13,7 @@ export default function Forecast({ forecastData }) {
     koreaDate.getUTCMonth() + 1
   }-${String(koreaDate.getUTCDate()).padStart(2, "0")}`;
 
-  // 한국 기준 년-월-일을 포함한 데이터를 가져옵니다.
+  // 오늘 날짜를 includes한 데이터를 가져옵니다. (오늘 날짜 예보를 가져옵니다.)
   const todayForeCast = forecastData?.list.filter((data) =>
     data.dt_txt.includes(todayKorea)
   );
