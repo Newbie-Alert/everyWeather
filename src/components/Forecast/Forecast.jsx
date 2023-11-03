@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./Forecast.module.css";
 
 export default function Forecast({ forecastData }) {
+  // TODO
+  // 여기 9 ~ 17줄 한국 시간 구하는 공통 함수로 빼는 것
+
   // 오늘 날짜를 가져옵니다.
   const utc = new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000;
   const krDiff = 9 * 60 * 60 * 1000;
