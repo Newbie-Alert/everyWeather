@@ -18,7 +18,11 @@ export default function Main({ weatherData }) {
           )}
         </div>
         <div className={styles.current_weather_temprature}>
-          {weatherData === null ? "" : <h4>{weatherData?.main.temp}도</h4>}
+          {weatherData === null ? (
+            ""
+          ) : (
+            <h4>{Number(weatherData?.main.temp).toFixed(1)}도</h4>
+          )}
         </div>
 
         <div className={styles.current_weather_current_city}>
