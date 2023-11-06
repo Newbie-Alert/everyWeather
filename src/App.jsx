@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Input from "./components/Input/Input";
-import Main from "./components/Main/Main";
-import Forecast from "./components/Forecast/Forecast";
+import Input from "./components/Input";
+import Main from "./components/Main";
+import Forecast from "./components/Forecast";
 
 function App() {
   // STATES

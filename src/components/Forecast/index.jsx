@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Forecast.module.css";
-import { todayKorea } from "../../utl";
+import { todayKorea } from "../../util";
 
 export default function Forecast({ forecastData }) {
   // 오늘 날짜를 includes한 데이터를 가져옵니다. (오늘 날짜 예보를 가져옵니다.)

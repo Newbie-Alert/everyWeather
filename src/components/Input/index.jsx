@@ -10,7 +10,7 @@ export default function Input({ setWeatherData, setForecastData }) {
 
   const [inputValue, setInputValue] = useState("");
   // 인풋 값으로 전달된 지역, 국가, 도시 등의 지리 정보를 받아옵니다. (사용하는 것은 위도와, 경도)
-  const geoInfoURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${inputValue}&key=${geoCodingKey}`;
+  const geoInfoURL = `${config.GEOCODING.GEO_INFO}${inputValue}&key=${geoCodingKey}`;
 
   // 맨 처음 방문 시 사용자의 위치 정보를 허용 받으면 사용자 위치의 날씨를 받아와 UI를 그립니다.
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function Input({ setWeatherData, setForecastData }) {
   // 현재 날씨를 받아옵니다.
   async function getWeather(lat, lon, key) {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
+      `${config.OpenWeather.GET_CURRENT_WEATHER}${lat}&lon=${lon}&appid=${key}&units=metric`
     );
     const data = await res.json();
     setWeatherData(data);
@@ -44,13 +44,13 @@ export default function Input({ setWeatherData, setForecastData }) {
   // 이후 5일의 날씨를 받아옵니다
   async function getForecast(lat, lon, key) {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric`
+      `${config.OpenWeather.GET_FORECAST_WEATHER}${lat}&lon=${lon}&appid=${key}&units=metric`
     );
     const data = await res.json();
     setForecastData(data);
   }
 
-  // input에 change 이벤트 발생 시 value state를 업데이트 합니다.
+  // input에 change 이벤트 발생 시 value state를 업데이트  합니다.
   const inputHandler = (e) => {
     setInputValue(e.target.value);
   };

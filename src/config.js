@@ -1,8 +1,11 @@
 export const config = {
   GEOCODING: {
-    API_KEY: process.env.REACT_APP_GEOCODING_API_KEY
+    API_KEY: process.env.REACT_APP_GEOCODING_API_KEY,
+    GEO_INFO: process.env.REACT_APP_GEO_INFO_URL,
   },
   OpenWeather: {
-    API_KEY: process.env.REACT_APP_OPEN_WEATHER_API_KEY
+    API_KEY: process.env.REACT_APP_OPEN_WEATHER_API_KEY,
+    GET_CURRENT_WEATHER: process.env.REACT_APP_GET_CURRENT_WEATHER_URL,
+    GET_FORECAST_WEATHER: process.env.REACT_APP_GET_FORECAST_WEATHER_URL
   }
 }
